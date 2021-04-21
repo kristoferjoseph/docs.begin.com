@@ -1,0 +1,46 @@
+{
+  "name": "docs.begin.com",
+  "version": "1.0.0",
+  "description": "Documentation site for Begin.com",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "./scripts/deploy",
+    "spellcheck": "cross-env npx spellchecker './src/views/docs/en/**/*.md' --no-suggestions -q -d ./scripts/dictionary.js --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls",
+    "start": "sandbox",
+    "test": "tape -r esm test/**/*.test.js",
+    "lint": "eslint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristoferjoseph/docs.begin.com.git"
+  },
+  "keywords": [],
+  "author": "kj <kj@begin.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kristoferjoseph/docs.begin.com/issues"
+  },
+  "homepage": "https://github.com/kristoferjoseph/docs.begin.com#readme",
+  "devDependencies": {
+    "@architect/eslint-config": "^1.0.0",
+    "@architect/sandbox": "^3.4.2",
+    "eslint": "^7.24.0",
+    "spellchecker-cli": "^4.4.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.2.2"
+  },
+  "dependencies": {
+    "@architect/functions": "^3.13.11",
+    "@toycode/markdown-it-class": "^1.2.4",
+    "esm": "^3.2.25",
+    "highlight.js": "^10.7.2",
+    "js-yaml": "^3.14.1",
+    "markdown-it": "^12.0.6",
+    "markdown-it-anchor": "^7.1.0",
+    "markdown-it-front-matter": "^0.2.3",
+    "slugify": "^1.5.0"
+  },
+  "eslintConfig": {
+    "extends": "@architect/eslint-config"
+  }
+}
